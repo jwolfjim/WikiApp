@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px Helvetica; -webkit-text-stroke: #0000cd; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #0000cd}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #0000cd; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>&lt;head&gt;</p>
+<p class="p2"><br></p>
+<p class="p3">&lt;/head&gt;</p>
+<p class="p3">&lt;body&gt;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>&lt;h1&gt; Wikipedia Search &lt;/h1&gt;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>&lt;h3&gt; or click &lt;a href = "https://en.wikipedia.org/wiki/Special:Random" target = "_blank"&gt; here &lt;/a&gt; for a random article...&lt;h3&gt;</p>
+<p class="p4"><span class="Apple-converted-space">  </span></p>
+<p class="p3"><span class="Apple-converted-space">   </span>&lt;!-- This is the input box and search button --&gt;</p>
+<p class="p4"><span class="Apple-converted-space">    </span></p>
+<p class="p3"><span class="Apple-converted-space">  </span>&lt;div class = "container" id = "inputBox"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;div class = "input-box"&gt;</p>
+<p class="p4"><span class="Apple-converted-space">     </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>&lt;input type = "form-control" id = "inputText" placeholder = "Search Wikipedia here!"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">      </span>&lt;button class = "btn btn-primary" id = "search"&gt;Search&lt;/button&gt;</p>
+<p class="p4"><span class="Apple-converted-space">      </span></p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;/div&gt; <span class="Apple-converted-space">                                 </span></p>
+<p class="p3"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p4"><span class="Apple-converted-space">    </span></p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;br&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;div class = "container" id = "results"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;a class = "links" id = "resName1" href = "#" target = "_blank"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;div id = "resText1"&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;br&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;a class = "links" id = "resName2" href = "#" target = "_blank"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;div id = "resText2"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;br&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;a class = "links" id = "resName3" href = "#" target = "_blank"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;div id = "resText3"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;br&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;a class = "links" id = "resName4" href = "#" target = "_blank"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;div id = "resText4"&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;br&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;a class = "links" id = "resName5" href = "#" target = "_blank"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;div id = "resText5"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;br&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;a class = "links" id = "resName6" href = "#" target = "_blank"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;div id = "resText6"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/div&gt; <span class="Apple-converted-space">       </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>&lt;div id = "closer" style = "font-size: 0.6em"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>Written and Coded by &lt;a target = "_blank" href = "https://jwolfgang.info"&gt;Jim C-M&lt;/a&gt; 2018</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p3">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+<p class="p3">&lt;style&gt;</p>
+<p class="p3">body {</p>
+<p class="p3"><span class="Apple-converted-space">   </span>background-color: white;</p>
+<p class="p3">}</p>
+<p class="p4"><br></p>
+<p class="p3">h1 {</p>
+<p class="p3"><span class="Apple-converted-space">  </span>margin-top: 200px;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>text-align: center;</p>
+<p class="p3">}</p>
+<p class="p4"><br></p>
+<p class="p3">.links {</p>
+<p class="p3"><span class="Apple-converted-space">  </span>font-size: 125%;</p>
+<p class="p3">}</p>
+<p class="p4"><br></p>
+<p class="p3">h3 {</p>
+<p class="p3"><span class="Apple-converted-space">  </span>text-align:center;</p>
+<p class="p3">}</p>
+<p class="p4"><br></p>
+<p class="p3">.inputBox {</p>
+<p class="p3"><span class="Apple-converted-space"> </span>text-align: center;</p>
+<p class="p3">}</p>
+<p class="p4"><br></p>
+<p class="p3">#results {</p>
+<p class="p3"><span class="Apple-converted-space">  </span>margin-top: 50px;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>text-align:left;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>height: 1000px;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>width: 1000px;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>overflow: auto;</p>
+<p class="p3"><span class="Apple-converted-space">  </span>/*border: 2px solid black;*/</p>
+<p class="p3">}</p>
+<p class="p4"><br></p>
+<p class="p3">&lt;/style&gt;</p>
+<p class="p4"><br></p>
+<p class="p3">&lt;script&gt;</p>
+<p class="p4"><br></p>
+<p class="p3">$(document).ready(function() {</p>
+<p class="p3"><span class="Apple-converted-space">  </span>//Creates variable that stores input on click</p>
+<p class="p3"><span class="Apple-converted-space">  </span>// Get the input field</p>
+<p class="p3">var input = document.getElementById("inputText");</p>
+<p class="p4"><br></p>
+<p class="p3">// Execute a function when the user releases a key on the keyboard</p>
+<p class="p3">input.addEventListener("keyup", function(event) {</p>
+<p class="p3"><span class="Apple-converted-space">  </span>// Cancel the default action, if needed</p>
+<p class="p3"><span class="Apple-converted-space">  </span>event.preventDefault();</p>
+<p class="p3"><span class="Apple-converted-space">  </span>// Number 13 is the "Enter" key on the keyboard</p>
+<p class="p3"><span class="Apple-converted-space">  </span>if (event.keyCode === 13) {</p>
+<p class="p3"><span class="Apple-converted-space">    </span>// Trigger the button element with a click</p>
+<p class="p3"><span class="Apple-converted-space">    </span>document.getElementById("search").click();</p>
+<p class="p3"><span class="Apple-converted-space">  </span>}</p>
+<p class="p3">});</p>
+<p class="p3"><span class="Apple-converted-space">  </span>$('#search').click(function(){</p>
+<p class="p3"><span class="Apple-converted-space">    </span>var wikiSearch = $('#inputText').val();</p>
+<p class="p3"><span class="Apple-converted-space">    </span>//console.log(wikiSearch);</p>
+<p class="p3"><span class="Apple-converted-space">    </span>var searchURL = "https://en.wikipedia.org/w/api.php?action=opensearch&amp;search=" + wikiSearch +"&amp;format=json&amp;callback=?";</p>
+<p class="p3"><span class="Apple-converted-space">  </span>$.ajax({</p>
+<p class="p3"><span class="Apple-converted-space">    </span>type: "GET",</p>
+<p class="p3"><span class="Apple-converted-space">    </span>url: searchURL,</p>
+<p class="p3"><span class="Apple-converted-space">    </span>contentType: "application/json; charset=utf-8",</p>
+<p class="p3"><span class="Apple-converted-space">    </span>dataType: "json",</p>
+<p class="p3"><span class="Apple-converted-space">    </span>success: function(data, textStatus, jqXHR){</p>
+<p class="p3"><span class="Apple-converted-space">      </span>console.log(data);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var res1 = data[1][0]; //This gets the name of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var resText1 = data[2][0]; //This gets a short description of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var res2 = data[1][1]; //This gets the name of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var resText2 = data[2][1]; //This gets a short description of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var res3 = data[1][2]; //This gets the name of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var resText3 = data[2][2]; //This gets a short description of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName1').html(res1);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resText1').html(resText1);<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName2').html(res2);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resText2').html(resText2);<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName3').html(res3);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resText3').html(resText3);<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName1').attr("href", data[3][0]);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName2').attr("href", data[3][1]);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName3').attr("href", data[3][2]);</p>
+<p class="p4"><br></p>
+<p class="p3"><span class="Apple-converted-space">      </span>var res4 = data[1][3]; //This gets the name of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var resText4 = data[2][3]; //This gets a short description of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var res5 = data[1][4]; //This gets the name of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var resText5 = data[2][4]; //This gets a short description of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var res6 = data[1][5]; //This gets the name of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>var resText6 = data[2][5]; //This gets a short description of the first hit</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName4').html(res4);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resText4').html(resText4);<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName5').html(res5);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resText5').html(resText5);<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName6').html(res6);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resText6').html(resText6);<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName4').attr("href", data[3][3]);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName5').attr("href", data[3][4]);</p>
+<p class="p3"><span class="Apple-converted-space">      </span>$('#resName6').attr("href", data[3][5]);</p>
+<p class="p4"><br></p>
+<p class="p3"><span class="Apple-converted-space">          </span>} <span class="Apple-converted-space">   </span></p>
+<p class="p3"><span class="Apple-converted-space">    </span>}</p>
+<p class="p4"><span class="Apple-converted-space">    </span></p>
+<p class="p3"><span class="Apple-converted-space">    </span>)</p>
+<p class="p3"><span class="Apple-converted-space">  </span>})</p>
+<p class="p4"><span class="Apple-converted-space">  </span></p>
+<p class="p4"><span class="Apple-converted-space">  </span></p>
+<p class="p3">});</p>
+<p class="p4"><br></p>
+<p class="p4"><br></p>
+<p class="p3">&lt;/script&gt;</p>
+</body>
+</html>

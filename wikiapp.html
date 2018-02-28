@@ -1,0 +1,189 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red15\green112\blue1;\red0\green0\blue194;
+\red146\green26\blue32;\red251\green0\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c50196\c0;\cssrgb\c0\c0\c80392;
+\cssrgb\c64706\c16471\c16471;\cssrgb\c100000\c0\c0;}
+\margl1440\margr1440\vieww24560\viewh18040\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE HTML>\
+<html>\
+<head>\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 <!-- Latest compiled and minified CSS -->\cf2 \strokec2 \
+\cf2 \strokec4 <\strokec5 link\strokec6 \'a0rel\strokec4 ="stylesheet"\strokec6 \'a0href\strokec4 ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">\cf2 \strokec2 \
+\
+\cf2 \strokec3 <!-- jQuery library -->\cf2 \strokec2 \
+\cf2 \strokec4 <\strokec5 script\strokec6 \'a0src\strokec4 ="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><\strokec5 /script\strokec4 >\cf2 \strokec2 \
+\
+\cf2 \strokec3 <!-- Latest compiled JavaScript -->\cf2 \strokec2 \
+\cf2 \strokec4 <\strokec5 script\strokec6 \'a0src\strokec4 ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"><\strokec5 /script\strokec4 >
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 </head>\
+<body>\
+  <h1> Wikipedia Search </h1>\
+  <h3> or click <a href = "https://en.wikipedia.org/wiki/Special:Random" target = "_blank"> here </a> for a random article...<h3>\
+  \
+   <!-- This is the input box and search button -->\
+    \
+  <div class = "container" id = "inputBox">\
+    <div class = "input-box">\
+     \
+      <input type = "form-control" id = "inputText" placeholder = "Search Wikipedia here!">\
+      <button class = "btn btn-primary" id = "search">Search</button>\
+      \
+    </div>                                  \
+  </div>\
+    \
+    <br>\
+    <div class = "container" id = "results">\
+      <ul>\
+        <a class = "links" id = "resName1" href = "#" target = "_blank">\
+        </a>\
+        <div id = "resText1"> \
+        </div>\
+        <br>\
+        <a class = "links" id = "resName2" href = "#" target = "_blank">\
+        </a>\
+        <div id = "resText2">\
+        </div>\
+        <br>\
+        <a class = "links" id = "resName3" href = "#" target = "_blank">\
+        </a>\
+        <div id = "resText3">\
+        </div>\
+        <br>\
+        <a class = "links" id = "resName4" href = "#" target = "_blank">\
+        </a>\
+        <div id = "resText4"> \
+        </div>\
+        <br>\
+        <a class = "links" id = "resName5" href = "#" target = "_blank">\
+        </a>\
+        <div id = "resText5">\
+        </div>\
+        <br>\
+        <a class = "links" id = "resName6" href = "#" target = "_blank">\
+        </a>\
+        <div id = "resText6">\
+        </div>        \
+      </ul>\
+    </div>\
+  <div id = "closer" style = "font-size: 0.6em">\
+    Written and Coded by <a target = "_blank" href = "https://jwolfgang.info">Jim C-M</a> 2018\
+    </div>\
+</body>\
+\
+<style>\
+body \{\
+   background-color: white;\
+\}\
+\
+h1 \{\
+  margin-top: 200px;\
+  text-align: center;\
+\}\
+\
+.links \{\
+  font-size: 125%;\
+\}\
+\
+h3 \{\
+  text-align:center;\
+\}\
+\
+.inputBox \{\
+ text-align: center;\
+\}\
+\
+#results \{\
+  margin-top: 50px;\
+  text-align:left;\
+  height: 1000px;\
+  width: 1000px;\
+  overflow: auto;\
+  /*border: 2px solid black;*/\
+\}\
+\
+</style>\
+\
+<script>\
+\
+$(document).ready(function() \{\
+  //Creates variable that stores input on click\
+  // Get the input field\
+var input = document.getElementById("inputText");\
+\
+// Execute a function when the user releases a key on the keyboard\
+input.addEventListener("keyup", function(event) \{\
+  // Cancel the default action, if needed\
+  event.preventDefault();\
+  // Number 13 is the "Enter" key on the keyboard\
+  if (event.keyCode === 13) \{\
+    // Trigger the button element with a click\
+    document.getElementById("search").click();\
+  \}\
+\});\
+  $('#search').click(function()\{\
+    var wikiSearch = $('#inputText').val();\
+    //console.log(wikiSearch);\
+    var searchURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + wikiSearch +"&format=json&callback=?";\
+  $.ajax(\{\
+    type: "GET",\
+    url: searchURL,\
+    contentType: "application/json; charset=utf-8",\
+    dataType: "json",\
+    success: function(data, textStatus, jqXHR)\{\
+      console.log(data);\
+      var res1 = data[1][0]; //This gets the name of the first hit\
+      var resText1 = data[2][0]; //This gets a short description of the first hit\
+      var res2 = data[1][1]; //This gets the name of the first hit\
+      var resText2 = data[2][1]; //This gets a short description of the first hit\
+      var res3 = data[1][2]; //This gets the name of the first hit\
+      var resText3 = data[2][2]; //This gets a short description of the first hit\
+      $('#resName1').html(res1);\
+      $('#resText1').html(resText1); \
+      $('#resName2').html(res2);\
+      $('#resText2').html(resText2); \
+      $('#resName3').html(res3);\
+      $('#resText3').html(resText3); \
+      $('#resName1').attr("href", data[3][0]);\
+      $('#resName2').attr("href", data[3][1]);\
+      $('#resName3').attr("href", data[3][2]);\
+\
+      var res4 = data[1][3]; //This gets the name of the first hit\
+      var resText4 = data[2][3]; //This gets a short description of the first hit\
+      var res5 = data[1][4]; //This gets the name of the first hit\
+      var resText5 = data[2][4]; //This gets a short description of the first hit\
+      var res6 = data[1][5]; //This gets the name of the first hit\
+      var resText6 = data[2][5]; //This gets a short description of the first hit\
+      $('#resName4').html(res4);\
+      $('#resText4').html(resText4); \
+      $('#resName5').html(res5);\
+      $('#resText5').html(resText5); \
+      $('#resName6').html(res6);\
+      $('#resText6').html(resText6); \
+      $('#resName4').attr("href", data[3][3]);\
+      $('#resName5').attr("href", data[3][4]);\
+      $('#resName6').attr("href", data[3][5]);\
+\
+          \}    \
+    \}\
+    \
+    )\
+  \})\
+  \
+  \
+\});\
+\
+\
+</script>\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 </html>\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+}
